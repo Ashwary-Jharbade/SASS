@@ -1,5 +1,21 @@
-$color-primary: #ffff00; // Yellow
+@mixin transform($property) {
+    -webkit-transform: $property;
+    -ms-transform: $property;
+    transform: $property;
+  }
 
-body {
-  background-color: $color-primary;
+@function add-numbers($first-number, $second-number) {
+    @return $first-number + $second-number
+}
+  
+.navbar {
+    background-color: orangered;
+    padding: add-numbers(5px, 100px);
+    ul {
+      list-style: none;
+    }
+    li {
+      text-align: center;
+      margin: 1rem;
+    }
 }
