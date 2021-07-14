@@ -1,21 +1,60 @@
-@mixin transform($property) {
-    -webkit-transform: $property;
-    -ms-transform: $property;
-    transform: $property;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
+$border-radius : 10px;
+$border-shadow : #203ee433 0px 7px 29px 0px;
 
-@function add-numbers($first-number, $second-number) {
-    @return $first-number + $second-number
+body{
+    font-family: 'Raleway', sans-serif;
 }
-  
-.navbar {
-    background-color: orangered;
-    padding: add-numbers(5px, 100px);
-    ul {
-      list-style: none;
+
+.cover{
+    margin-left: 120px;
+    align-content: center;
+    .circle{
+        width: 100px;
+        height: 100px;
+        background-color: #3F51B5;
+        border-radius: 50%;
+        position: relative;
+        top:80px;
+        left:-110px;
     }
-    li {
-      text-align: center;
-      margin: 1rem;
+    .outer-box{
+        width: 500px;
+        height: 280px;
+        box-shadow:$border-shadow;
+        display: inline-flex;
+        border-radius: $border-radius;
+        padding: 10px;
+        background-color: white;
+        img{
+            width: 300px;
+            height: 200px;
+            position: relative;
+            top: 40px;
+            left:-50px;
+            border-radius: $border-radius;
+            box-shadow:$border-shadow;
+        }
+        .content{
+            padding:40px 20px 0 0;
+        }
+        h1 , h3{
+            padding: 0;
+            margin: 0;
+        }
+        button{
+            border-radius: $border-radius;
+            border-color: transparent;
+            background-color:#3F51B5;
+            color: white;
+            width: 100%;
+            height: 35px;
+            font-size: 16px;
+        }
+        button:hover{
+            background-color:#3145b8;
+        }
+    
     }
 }
+
