@@ -6,6 +6,15 @@ body{
     font-family: 'Raleway', sans-serif;
 }
 
+@mixin animate(){
+    0%{ transform: scale(1); }
+    100%{ transform: scale(1.2); }
+}
+
+@keyframes wobble {
+    @include animate;
+}
+
 .cover{
     margin-left: 120px;
     align-content: center;
@@ -17,6 +26,7 @@ body{
         position: relative;
         top:80px;
         left:-110px;
+        animation: wobble 5s  infinite;
     }
     .outer-box{
         width: 500px;
